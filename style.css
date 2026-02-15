@@ -1,3 +1,32 @@
+/* css color variables */
+:root{
+    --navy:        #1C3163;
+    --deep:        #00071B;
+    --sand:        #D6B585;
+    --sand-light:  #E8D0A8;
+    --sand-pale:   rgba(214, 181, 133, 0.12);
+    --white:       #FEFFFF;
+    --white-dim:   rgba(254, 255, 255, 0.6);
+    --white-faint: rgba(254, 255, 255, 0.08);
+}
+
+/* font classes */
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    letter-spacing: 0.05em;
+    font-style: normal;
+}
+
+
 #navbar a {
     text-decoration: none;
     color: #2A2A2A;
@@ -59,19 +88,6 @@
     #navbar a {
         padding: 0.75rem 1rem;
     }
-}
-
-.inter-regular {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.playfair {
-    font-family: "Cinzel", serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 #hero-section {
