@@ -250,7 +250,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
 .services-inner{
@@ -583,6 +583,7 @@ body{
 
     #services-section {
         padding: 5rem 2rem;
+        height:100vh;
     }
 
     #services-section h2 {
@@ -680,6 +681,7 @@ body{
     }
     #services-section {
         padding: 6rem 2rem;
+        height:100vh;
     }
 
     .services-inner {
