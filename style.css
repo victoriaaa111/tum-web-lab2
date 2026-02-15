@@ -89,7 +89,7 @@ body{
 
 /* hero section*/
 #hero-section {
-    min-height: 100vh;
+    height: calc(100vh - 0.5rem - 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,9 +182,66 @@ body{
 
 /*about section */
 #about-section {
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--sand-light);
+    padding: 3.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
 }
+
+.about-inner{
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+#about-section h2{
+    font-size: 1.75rem;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom:1rem;
+}
+
+.about-divider{
+    width: 3rem;
+    height: 2px;
+    background-color: var(--navy);
+    opacity: 0.4;
+    margin-bottom: 1rem;
+}
+
+.about-blocks{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-block{
+    display: flex;
+    max-width: 680px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(214, 181, 133, 0.2);
+    gap: 1rem;
+    align-items: flex-start;
+    background-color: var(--white-dim);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about-icon{
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.about-block p{
+    font-size: 0.9rem;
+    color: var(--deep);
+    line-height: 1.75;
+    opacity: 0.85;
+}
+
 
 /* tablet */
 @media (min-width: 765px) {
@@ -205,6 +262,9 @@ body{
     #navbar a {
         padding: 0.55rem 0.85rem;
         font-size: 0.8rem;
+    }
+    #hero-section {
+        height: calc(100vh - 0.75rem - 3.25rem);
     }
 
     .hero-border {
@@ -233,6 +293,23 @@ body{
         padding: 0 2.25rem;
         font-size: 0.8rem;
     }
+
+    #about-section {
+        height: 100vh;
+    }
+
+    #about-section {
+        padding: 5rem 2rem;
+        box-sizing: border-box;
+    }
+
+    #about-section h2 {
+        font-size: 2.25rem;
+    }
+
+    .about-block p {
+        font-size: 0.975rem;
+    }
 }
 
 /* desktop */
@@ -247,8 +324,23 @@ body{
         padding: 0.6rem 1rem;
         font-size: 0.875rem;
     }
+    #hero-section {
+        height: calc(100vh - 1rem - 3.25rem);
+    }
     .hero-border {
         padding: 3.5rem 2.5rem;
+    }
+    #about-section {
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    #about-section {
+        padding: 6rem 2rem;
+        box-sizing: border-box;
+    }
+
+    #about-section h2 {
+        font-size: 2.5rem;
     }
 }
 
