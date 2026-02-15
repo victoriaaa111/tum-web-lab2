@@ -180,6 +180,12 @@ body{
     box-shadow: 0 2px 10px rgba(214, 181, 133, 0.2);
 }
 
+/*about section */
+#about-section {
+    min-height: 100vh;
+    background-color: var(--sand-light);
+}
+
 /* tablet */
 @media (min-width: 765px) {
     #navbar {
