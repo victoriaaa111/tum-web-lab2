@@ -182,7 +182,7 @@ body{
 
 /*about section */
 #about-section {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--sand-light);
     padding: 3.5rem 1.25rem;
     display: flex;
@@ -250,7 +250,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
+    min-height: 100vh;
 }
 
 .services-inner{
@@ -310,7 +310,7 @@ body{
 
 /* reviews section */
 #reviews-section{
-    height: auto;
+    min-height: 100vh;
     background-color: var(--sand-light);
     padding: 3.5rem 1.25rem;
     box-sizing: border-box;
@@ -565,10 +565,6 @@ body{
     }
 
     #about-section {
-        height: 100vh;
-    }
-
-    #about-section {
         padding: 5rem 2rem;
         box-sizing: border-box;
     }
@@ -583,7 +579,6 @@ body{
 
     #services-section {
         padding: 5rem 2rem;
-        height:100vh;
     }
 
     #services-section h2 {
@@ -610,7 +605,6 @@ body{
 
     #reviews-section {
         padding: 5rem 2rem;
-        height: 100vh;
     }
 
     #reviews-section h2 {
@@ -667,10 +661,7 @@ body{
     .hero-border {
         padding: 3.5rem 2.5rem;
     }
-    #about-section {
-        height: 100vh;
-        box-sizing: border-box;
-    }
+
     #about-section {
         padding: 6rem 2rem;
         box-sizing: border-box;
@@ -681,7 +672,6 @@ body{
     }
     #services-section {
         padding: 6rem 2rem;
-        height:100vh;
     }
 
     .services-inner {
@@ -703,7 +693,7 @@ body{
 
     #reviews-section {
         padding: 6rem 2rem;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .reviews-inner {
