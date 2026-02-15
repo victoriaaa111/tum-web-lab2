@@ -485,6 +485,34 @@ body{
     transform: translateY(0);
 }
 
+.contact-call-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    padding: 0 1.75rem;
+    background-color: transparent;
+    color: var(--sand);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(214, 181, 133, 0.5);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-call-btn:hover {
+    background-color: var(--sand-pale);
+    border-color: var(--sand);
+    transform: translateY(-2px);
+}
+
+.contact-call-btn:active {
+    transform: translateY(0);
+}
+
 /* tablet */
 @media (min-width: 765px) {
     #navbar {
@@ -593,6 +621,31 @@ body{
         grid-template-columns: 1fr 1fr;
         gap: 1.25rem;
     }
+    #contact-section {
+        padding: 5rem 2rem 3rem;
+    }
+
+    #contact-section h2 {
+        font-size: 2.25rem;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-email-btn {
+        height: 3rem;
+        padding: 0 2.25rem;
+        font-size: 0.8rem;
+    }
+    .contact-call-btn {
+        height: 3rem;
+        padding: 0 2.25rem;
+        font-size: 0.8rem;
+    }
+
 }
 
 /* desktop */
@@ -662,6 +715,18 @@ body{
     .review-card {
         padding: 1.5rem;
     }
+    #contact-section {
+        padding: 6rem 2rem 4rem;
+    }
+
+    .contact-inner {
+        max-width: 860px;
+    }
+
+    #contact-section h2 {
+        font-size: 2.5rem;
+    }
+
 }
 
 
