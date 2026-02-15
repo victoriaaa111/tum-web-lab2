@@ -379,6 +379,112 @@ body{
     letter-spacing: 0.03rem;
 }
 
+/* contact section */
+#contact-section{
+    background-color: var(--deep);
+    padding: 3.5rem 1.25rem 2.5rem;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.contact-inner{
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#contact-section h2{
+    font-size: 1.75rem;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom:1rem;
+}
+
+.contact-divider{
+    width: 3rem;
+    height: 2px;
+    background-color: var(--sand);
+    opacity: 0.4;
+    margin-bottom: 1rem;
+}
+
+.contact-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-icon{
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.contact-label{
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sand);
+    opacity: 0.75;
+    margin-bottom: 0.2rem;
+}
+
+.contact-value{
+    font-size: 0.9rem;
+    color: var(--white-dim);
+    line-height: 1.5;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: var(--white-dim);
+    transition: color 0.18s ease;
+    cursor: pointer;
+}
+
+.contact-link:hover{
+    color: var(--sand-light);
+}
+
+.contact-cta{
+    margin-bottom: 3rem;
+}
+
+.contact-email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    padding: 0 1.75rem;
+    background-color: var(--sand);
+    color: var(--deep);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 20px rgba(214, 181, 133, 0.2);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-email-btn:hover {
+    background-color: var(--sand-light);
+    box-shadow: 0 8px 28px rgba(214, 181, 133, 0.3);
+    transform: translateY(-2px);
+}
+
+.contact-email-btn:active {
+    transform: translateY(0);
+}
+
 /* tablet */
 @media (min-width: 765px) {
     #navbar {
