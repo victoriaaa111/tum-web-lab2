@@ -1,24 +1,60 @@
 # Lab 2 - Landing page
 
-Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
+## Description
 
-> For a maximal grade, the website should be for a real client (your/friends/relatives business), otherwise -1-2 points
+This project represents a landing page for an individual lawyer - Vitalie Mutruc. The website provides clear information about the legal services offered, professional background, reviews and contact details.
+The page is built using HTML and vanilla CSS.
 
-## Customer requirements
+## Features
+* Navigation bar with scrolling between sections
+* Hero section with Call to Action
+* About section
+* Services section 
+* Reviews section
+* Contact section
+* Responsive design
 
-- Some form of navigation to sections (links, buttons)
-- Call to action
-- At least 4 sections ([see examples](https://webflow.com/blog/high-converting-landing-page))
-- Pleasant to the eyes
+## Screenshots
+* Hero section with Navbar in Desktop view
 
-## Dev requirements
+    <img src="screenshots/img.png" width="600">
 
-- Use vanilla CSS and HTML (no frameworks)
-- Have a decent git history (no one commit)
-- The page should be deployed on a free hosting service (example: GitHub Pages, Vercel, Netlify)
-- Project repo should have a README with a short description of the landing page topic, screenshots, and a link to the live demo
+* Hero section with Navbar in Mobile view
 
-## Other requirements:
+  <img src="screenshots/img_1.png" width="300">
 
-- For potential maximal mark, a WIP version should be submitted during the class
-- Use index.html, reset.css
+* About section in Desktop view
+
+    <img src="screenshots/img_2.png" width="800">
+
+* About section in Mobile view
+
+    <img src="screenshots/img_3.png" width="300">
+
+* Services section in Desktop view
+
+    <img src="screenshots/img_4.png" width="800">
+
+* Services section in Mobile view
+
+    <img src="screenshots/img_5.png" width="300">
+
+* Reviews section in Desktop view
+
+    <img src="screenshots/img_9.png" width="800">
+
+* Reviews section in Mobile view
+
+    <img src="screenshots/img_6.png" width="300">
+
+* Contact section in Desktop view
+
+    <img src="screenshots/img_8.png" width="800">
+
+* Contact section in Mobile view
+
+    <img src="screenshots/img_7.png" width="300">
+
+## Link to website
+The website is available at: https://victoriaaa111.github.io/tum-web-lab2/
+
