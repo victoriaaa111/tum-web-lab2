@@ -53,7 +53,7 @@ The page is built using HTML and vanilla CSS.
 
 * Contact section in Mobile view
 
-    <img src="screenshots/img_7.png" width="300">
+    <img src="screenshots/img_10.png" width="300">
 
 ## Link to website
 The website is available at: https://victoriaaa111.github.io/tum-web-lab2/
