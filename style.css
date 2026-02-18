@@ -185,12 +185,16 @@ body{
     min-height: 100vh;
     background-color: var(--sand-light);
     padding: 3.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
 }
 
 .about-inner{
     max-width: 680px;
     margin: 0 auto;
+    width: 100%;
 }
 
 #about-section h2{
@@ -605,6 +609,17 @@ body{
         font-size: 0.975rem;
     }
 
+    .about-content {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+
+    .about-photo {
+        max-width: 280px;
+        flex-shrink: 0;
+        align-self: center;
+    }
     #services-section {
         padding: 5rem 2rem;
     }
@@ -697,6 +712,18 @@ body{
 
     #about-section h2 {
         font-size: 2.5rem;
+    }
+    .about-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        gap: 4rem;
+    }
+
+    .about-photo {
+        max-width: 440px;
     }
     #services-section {
         padding: 6rem 2rem;
