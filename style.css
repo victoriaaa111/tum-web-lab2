@@ -31,10 +31,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
-    background-color: #122C4F;
-}
-
 /* navbar */
 #navbar{
     z-index: 9999;
@@ -95,6 +91,7 @@ body{
     align-items: center;
     padding: 2.5rem 1rem 2rem;
     position: relative;
+    background: var(--navy);
 }
 
 .hero-border {
