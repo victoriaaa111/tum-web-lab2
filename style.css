@@ -35,6 +35,42 @@ h1 em, h2 em {
     color: var(--taupe);
 }
 
+/*shared*/
+
+.section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 1.25rem;
+    display: block;
+}
+.section-divider {
+    width: 2.5rem;
+    height: 1px;
+    background: var(--taupe);
+    opacity: 0.5;
+    margin: 1.5rem 0 0.8rem;
+}
+.section-rule.on-dark { background: var(--dune); opacity: 0.2; }
+.section-numeral {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(163, 150, 141, 0.1);
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.04em;
+}
+.section-numeral.on-dark { color: rgba(248, 244, 238, 0.05); }
+
+
 /* buttons */
 .btn-primary {
     display: inline-flex;
@@ -240,11 +276,10 @@ html {
 /*about section */
 #about-section {
     min-height: 100vh;
-    background-color: var(--sand-light);
-    padding: 3.5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: var(--pearl);
+    padding: 4rem 1.25rem;
+    position: relative;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -254,71 +289,64 @@ html {
     width: 100%;
 }
 
-#about-section h2{
-    font-size: 1.75rem;
-    color: var(--deep);
-    line-height: 1.2;
-    margin-bottom:1rem;
-}
-
-.about-divider{
-    width: 3rem;
-    height: 2px;
-    background-color: var(--navy);
-    opacity: 0.4;
-    margin-bottom: 2rem;
-}
-
-.about-blocks{
+.about-layout{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+#about-section h2{
+    font-size: 2.5rem;
+    color: var(--leather);
+}
+
+.about-left .section-rule {
+    background: var(--leather);
+    opacity: 0.12;
 }
 
 .about-block{
     display: flex;
     max-width: 680px;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: var(--white-dim);
-    border: 1px solid rgba(214, 181, 133, 0.2);
-    gap: 1rem;
+    padding: 1.25rem 0;
+    gap: 1.25rem;
+    border-bottom: 1px solid rgba(38, 38, 38, 0.07);
     align-items: flex-start;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.about-block:first-child {
+    border-top: 1px solid rgba(38, 38, 38, 0.07);
+}
+
 .about-block:hover{
     transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
-.about-icon{
-    font-size: 1.1rem;
+.about-block-marker {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--taupe);
     flex-shrink: 0;
-    margin-top: 0.1rem;
+    padding-top: 0.15rem;
+    min-width: 1.75rem;
 }
 
-.about-block p{
-    font-size: 0.9rem;
-    color: var(--deep);
-    line-height: 1.75;
-    opacity: 0.85;
+.about-block p {
+    font-size: 0.8rem;
+    color: var(--navy-black);
+    line-height: 1.85;
+    font-weight: 300;
 }
 
-.about-content {
+.about-photo-row {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1;
 }
 
 .about-photo {
-    width: 100%;
-    max-width: 240px;
     position: relative;
 }
 
@@ -326,14 +354,45 @@ html {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0.75rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    filter: grayscale(15%) contrast(1.04);
+    border: 1px solid rgba(38, 38, 38, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-photo img:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.photo-caption {
+    font-size: 0.56rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    opacity: 0.7;
+    margin-top: 0.6rem;
+}
+.about-quote {
+    padding: 1rem 0;
+}
+
+blockquote {
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--leather);
+    line-height: 1.35;
+    position: relative;
+    padding-left: 1.5rem;
+}
+blockquote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    bottom: 0.3em;
+    width: 2px;
+    background: var(--taupe);
+    opacity: 0.45;
 }
 
 /* service section */
