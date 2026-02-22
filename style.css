@@ -398,75 +398,73 @@ blockquote::before {
 
 /* service section */
 #services-section{
-    background-color: var(--navy);
-    padding: 3.5rem 1.25rem;
+    background-color: var(--umber);
+    padding: 4rem 1.25rem;
+    position: relative;
+    overflow: hidden;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
 }
 
 .services-inner{
-    max-width: 680px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 #services-section h2{
-    font-size: 1.75rem;
-    color: var(--white);
-    line-height: 1.2;
-    margin-bottom:1rem;
+    font-size: 2.5rem;
+    color: var(--vanilla);
 }
 
-.services-divider{
-    width: 3rem;
-    height: 2px;
-    background-color: var(--sand);
-    opacity: 0.4;
-    margin-bottom: 1rem;
-}
 
 .services-grid{
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
 }
 
 .service-card{
-    background-color: rgba(0, 7, 27, 0.4);
-    border: 1px solid rgba(214, 181, 133, 0.2);
-    border-radius: 0.75rem;
-    padding: 1.5rem 1.25rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr 1.5rem;
+    gap:1.25rem;
+    align-items: start;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba(228, 221, 204, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.service-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+.service-card:first-child {
+    border-top: 1px solid rgba(228, 221, 204, 0.1);
+}
+.service-card:hover {
+    background: rgba(228, 221, 204, 0.04);
 }
 
-.service-card-icon{
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-right: 0.75rem;
+.service-card-num{
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--taupe);
+    padding-top: 0.3rem;
 }
 
-.service-card h3{
-    color: var(--sand-light);
+.service-card-body h3{
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--dune);
     margin-bottom: 0.6rem;
-    margin-top: 0.3rem;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
-.service-card p{
-    font-size: 0.875rem;
-    color: var(--white-dim);
-    line-height: 1.75;
+.service-card-body p{
+    font-size: 0.8rem;
+    color: rgba(228, 221, 204, 0.5);
+    line-height: 1.5;
+    font-weight: 300;
 }
+
 
 /* reviews section */
 #reviews-section{
