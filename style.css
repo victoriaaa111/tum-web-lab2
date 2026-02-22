@@ -45,6 +45,7 @@ h1 em, h2 em {
     color: var(--taupe);
     margin-bottom: 1.25rem;
     display: block;
+    max-width: 300px;
 }
 .section-divider {
     width: 2.5rem;
@@ -284,7 +285,7 @@ html {
 }
 
 .about-inner{
-    max-width: 680px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
 }
@@ -308,7 +309,6 @@ html {
 
 .about-block{
     display: flex;
-    max-width: 680px;
     padding: 1.25rem 0;
     gap: 1.25rem;
     border-bottom: 1px solid rgba(38, 38, 38, 0.07);
@@ -352,6 +352,7 @@ html {
 
 .about-photo img {
     width: 100%;
+    max-width: 550px;
     height: auto;
     display: block;
     filter: grayscale(15%) contrast(1.04);
@@ -707,29 +708,27 @@ blockquote::before {
     }
 
     #about-section {
-        padding: 5rem 2rem;
-        box-sizing: border-box;
+        padding: 5rem 2.5rem;
     }
-
     #about-section h2 {
-        font-size: 2.25rem;
+        font-size: 3rem;
     }
-
-    .about-block p {
-        font-size: 0.975rem;
+    .about-inner{
+        width: 680px;
     }
-
-    .about-content {
+    .about-photo-row {
         flex-direction: row;
         gap: 3rem;
-        align-items: flex-start;
+        align-items: center;
+    }
+    .about-photo-row .about-photo,
+    .about-photo-row .about-quote {
+        flex: 1;
+    }
+    blockquote {
+        font-size: 2rem;
     }
 
-    .about-photo {
-        max-width: 280px;
-        flex-shrink: 0;
-        align-self: center;
-    }
     #services-section {
         padding: 5rem 2rem;
     }
@@ -825,25 +824,26 @@ blockquote::before {
     }
 
     #about-section {
-        padding: 6rem 2rem;
-        box-sizing: border-box;
+        padding: 7rem 4rem;
     }
-
     #about-section h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
-    .about-inner {
-        max-width: 1000px;
-        margin: 0 auto;
+    .about-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+        margin-bottom: 4rem; }
+
+    .about-inner{
+        width: 1100px;
     }
 
-    .about-content {
-        gap: 4rem;
+    blockquote {
+        font-size: 2.2rem;
     }
 
-    .about-photo {
-        max-width: 440px;
-    }
     #services-section {
         padding: 6rem 2rem;
     }
