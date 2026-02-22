@@ -30,6 +30,7 @@ The page is built using HTML and vanilla CSS.
 * About section in Mobile view
 
     <img src="screenshots/img_3.png" width="300">
+    <img src="screenshots/img_7.png" width="300">
 
 * Services section in Desktop view
 
