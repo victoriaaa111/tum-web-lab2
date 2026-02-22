@@ -728,30 +728,23 @@ blockquote::before {
     }
 
     #services-section {
-        padding: 5rem 2rem;
+        padding: 5rem 2.5rem;
     }
 
     #services-section h2 {
-        font-size: 2.25rem;
-    }
-
-    .services-grid {
-        flex-direction: row;
-        gap: 1.5rem;
+        font-size: 3rem;
     }
 
     .service-card {
-        flex: 1;
-        padding: 2rem 1.5rem;
+        grid-template-columns: 3rem 1fr 2rem;
+        gap: 1.75rem;
+        padding: 2rem 0;
     }
 
-    .service-card h3 {
-        font-size: 1.1rem;
+    .service-card-body h3 {
+        font-size: 1.6rem;
     }
 
-    .service-card p {
-        font-size: 0.9rem;
-    }
 
     #reviews-section {
         padding: 5rem 2rem;
@@ -843,24 +836,20 @@ blockquote::before {
     }
 
     #services-section {
-        padding: 6rem 2rem;
+        padding: 7rem 4rem;
     }
 
-    .services-inner {
-        max-width: 860px;
-    }
 
     #services-section h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
-    .service-card {
-        padding: 2.5rem 2rem;
+    .service-card-body h3 {
+        font-size: 1.75rem;
     }
 
-    .service-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.75rem;
+    .service-card-body p {
+        font-size: 0.82rem;
     }
 
     #reviews-section {
