@@ -411,7 +411,6 @@ blockquote::before {
     margin: 0 auto;
     width: 100%;
     position: relative;
-    z-index: 1;
 }
 
 #services-section h2{
@@ -474,6 +473,9 @@ blockquote::before {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .reviews-inner{
@@ -749,11 +751,11 @@ blockquote::before {
 
 
     #reviews-section {
-        padding: 5rem 2rem;
+        padding: 5rem 2.5rem;
     }
 
     #reviews-section h2 {
-        font-size: 2.25rem;
+        font-size: 3rem;
     }
 
     .reviews-grid {
@@ -855,21 +857,13 @@ blockquote::before {
     }
 
     #reviews-section {
-        padding: 6rem 2rem;
-        min-height: 100vh;
-    }
-
-    .reviews-inner {
-        max-width: 860px;
+        padding: 7rem 4rem;
     }
 
     #reviews-section h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
-    .review-card {
-        padding: 1.5rem;
-    }
     #contact-section {
         padding: 6rem 2rem 4rem;
     }
