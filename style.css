@@ -626,13 +626,21 @@ blockquote::before {
 }
 
 /* mascot */
-#mascot-wrapper{
+.mascot-outer {
     position: fixed;
-    bottom:1.5rem;
-    right: 1.5rem;
+    bottom: 1rem;
+    right: 1rem;
     z-index: 9998;
-    width:70px;
-    cursor:pointer;
+    width: 70px;
+    opacity: 0;
+    animation: mascot-appear 0.5s ease-out 3s forwards,
+            mascot-peek   14s ease-in-out 8s infinite;
+}
+
+#mascot-wrapper {
+    width: 100%;
+    cursor: pointer;
+    animation: mascot-float 3s ease-in-out 3.5s infinite;
 }
 
 .mascot-img{
@@ -651,6 +659,7 @@ blockquote::before {
     border-radius: 50%;
     background: radial-gradient(circle, rgba(163, 150, 141, 0.8) 0%, transparent 78%);
     z-index: -1;
+    animation: mascot-glow-pulse 2.5s ease-in-out 6s infinite;
 }
 
 .mascot-speech{
@@ -791,7 +800,7 @@ blockquote::before {
         border-left: 1px solid rgba(250, 248, 245, 0.08);
     }
 
-    #mascot-wrapper {
+    .mascot-outer {
         width: 95px;
         bottom: 1.25rem;
         right: 1.25rem;
@@ -902,7 +911,7 @@ blockquote::before {
         border-left: 1px solid rgba(250, 248, 245, 0.08);
     }
 
-    #mascot-wrapper {
+    .mascot-outer {
         width: 105px;
         bottom: 1.5rem;
         right: 1.5rem;
@@ -922,4 +931,26 @@ blockquote::before {
 
 }
 
+/* animations */
+@keyframes mascot-appear {
+    0%   { opacity: 0; transform: translateY(20px) translateX(0); }
+    100% { opacity: 1; transform: translateY(0)    translateX(0); }
+}
 
+@keyframes mascot-peek {
+    0% { transform: translateX(0); opacity: 1; }
+    45% { transform: translateX(0); opacity: 1; }
+    55% { transform: translateX(150px); opacity: 0; }
+    90% { transform: translateX(150px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes mascot-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-9px); }
+}
+
+@keyframes mascot-glow-pulse {
+    0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+    50%       { opacity: 1;   transform: translateX(-50%) scale(1.2); }
+}
