@@ -625,6 +625,23 @@ blockquote::before {
     flex-wrap: wrap;
 }
 
+.btn-call{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.75rem;
+    background: transparent;
+    color: var(--dune);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(228, 221, 204, 0.3);
+    transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
 /* mascot */
 .mascot-outer {
     position: fixed;
@@ -798,6 +815,10 @@ blockquote::before {
     .contact-item:nth-child(2n) {
         padding-left: 2rem;
         border-left: 1px solid rgba(250, 248, 245, 0.08);
+    }
+
+    .btn-call{
+        display: none;
     }
 
     .mascot-outer {
