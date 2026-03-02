@@ -832,11 +832,11 @@ blockquote::before {
         height: 105px;
     }
     .mascot-speech{
-        width:165px;
+        width:180px;
         padding: 0.65rem 0.8rem 0.55rem;
     }
     .mascot-speech p{
-        font-size: 0.56rem;
+        font-size: 0.62rem;
     }
 
 }
@@ -943,11 +943,11 @@ blockquote::before {
         height: 110px;
     }
     .mascot-speech{
-        width:180px;
+        width:190px;
         padding: 0.7rem 0.85rem 0.6rem;
     }
     .mascot-speech p{
-        font-size: 0.58rem;
+        font-size: 0.68rem;
     }
 
 }
