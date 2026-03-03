@@ -22,14 +22,25 @@ const mascot = await getEntry('mascot', 'mascot')
     <title>Vitalie Mutruc - Avocatul tău</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
+      if (window.location.hash) {
+        const hash = window.location.hash;
+        if (
+          hash.includes('invite_token=') ||
+          hash.includes('recovery_token=') ||
+          hash.includes('confirmation_token=')
+        ) {
+          window.location.href = '/admin/' + hash;
+        }
+      }
+
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+          window.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
       }
     </script>
   </head>
