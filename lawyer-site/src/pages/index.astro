@@ -1,5 +1,14 @@
 ---
 import '../styles/global.css'
+import { getEntry } from 'astro:content'
+
+const hero     = await getEntry('hero', 'hero')
+const about    = await getEntry('about', 'about')
+const contact  = await getEntry('contact', 'contact')
+const services = await getEntry('services', 'services')
+const reviews  = await getEntry('reviews', 'reviews')
+const mascot = await getEntry('mascot', 'mascot')
+
 ---
 
 <!doctype html>
@@ -11,9 +20,6 @@ import '../styles/global.css'
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <title>Vitalie Mutruc - Avocatul tău</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="output.css" />
   </head>
   <body>
     <header>
@@ -33,13 +39,13 @@ import '../styles/global.css'
         <span></span><span></span><span></span><span></span><span></span>
       </div>
       <div class="hero-content">
-        <p class="hero-badge">Consultanță juridică &bull; Reprezentare &bull; Confidențialitate</p>
-        <h1>Avocat<br><em>Vitalie Mutruc</em></h1>
+        <p class="hero-badge">{hero.data.badge}</p>
+        <h1>Avocat<br><em>{hero.data.title}</em></h1>
         <div class="hero-rule"></div>
-        <p class="hero-des">Consultanță juridică clară și soluții eficiente pentru persoane fizice și juridice.</p>
+        <p class="hero-des">{hero.data.description}</p>
         <div class="hero-actions">
-          <a href="#contact-section" class="btn-primary">Contactează-mă</a>
-          <a href="#services-section" class="btn-secondary">Servicii</a>
+          <a href="#contact-section" class="btn-primary">{hero.data.cta_primary}</a>
+          <a href="#services-section" class="btn-secondary">{hero.data.cta_secondary}</a>
         </div>
       </div>
     </section>
@@ -57,32 +63,28 @@ import '../styles/global.css'
               <div class="about-block">
                 <div class="about-block-marker">01</div>
                 <p>
-                  Absolvent al Universității de Stat din Moldova (1994–1999), jurist licențiat în drept, activez în baza Licenței nr. 3164 din 12.06.2017, eliberată de Ministerul Justiției a Republicii Moldova.
-                </p>
+{about.data.block1}</p>
               </div>
               <div class="about-block">
                 <div class="about-block-marker">02</div>
                 <p>
-                  Ofer consultanță și reprezentare juridică în domeniul dreptului civil, familiei, fiscal, vamal, afacerilor și comercial.
-                </p>
+{about.data.block2}</p>
               </div>
               <div class="about-block">
                 <div class="about-block-marker">03</div>
                 <p>
-                  Pun accent pe soluții clare, comunicare transparentă și protejarea intereselor clientului în fiecare etapă a procesului juridic.
-                </p>
+{about.data.block3}</p>
             </div>
           </div>
         </div>
             <div class="about-photo-row">
               <div class="about-photo">
-                <img src="vitalie-office.jpg" alt="Avocat Vitalie Mutruc" />
+                <img src="/vitalie-office.jpg" alt="Avocat Vitalie Mutruc" />
                 <div class="photo-caption">Vitalie Mutruc - Avocat, Chișinău</div>
               </div>
               <div class="about-quote">
                 <blockquote>
-                  &ldquo;Justiția nu este o promisiune — este un angajament.&rdquo;
-                </blockquote>
+&ldquo;{about.data.quote}&rdquo;</blockquote>
               </div>
             </div>
         </div>
@@ -95,33 +97,18 @@ import '../styles/global.css'
         <h2>Ce<br><em>oferim</em></h2>
         <div class="section-divider light"></div>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-card-num">01</div>
-            <div class="service-card-body">
-              <h3>Consultanță juridică<br>la birou</h3>
-              <p>
-                Ofer consultații juridice în cadrul biroului, într-un mediu profesional și confidențial, unde analizăm în detaliu situația dumneavoastră și stabilim pașii necesari.
-              </p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-card-num">02</div>
-            <div class="service-card-body">
-              <h3 class="playfair">Consultanță juridică<br>online</h3>
-              <p class="inter-regular">
-                Ofer consultații juridice online pentru clienții care nu se pot prezenta fizic la birou. Discuțiile se desfășoară într-un mod sigur și eficient, prin mijloace de comunicare la distanță.
-              </p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-card-num">03</div>
-            <div class="service-card-body">
-              <h3 class="playfair">Reprezentare<br>în instanță</h3>
-              <p class="inter-regular">
-                Asigur reprezentarea și apărarea intereselor clienților în fața instanțelor de judecată, în toate etapele procesului, cu profesionalism și responsabilitate.
-              </p>
-            </div>
-          </div>
+          {services.data.items
+            .sort((a, b) => a.order - b.order)
+            .map((service, i) => (
+              <div class="service-card">
+                <div class="service-card-num">0{i + 1}</div>
+                <div class="service-card-body">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -140,36 +127,17 @@ import '../styles/global.css'
         </h2>
         <div class="w-[2.5rem] h-[1px] bg-taupe opacity-50 mt-[1.5rem] mx-0 mb-[0.8rem]"></div>
         <div class="flex flex-col gap-[1rem]
-             tablet:grid tablet: grid-cols-2 tablet:gap-[1.25rem]">
-          <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in
-               hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)]
-               before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
-            <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;Am apelat pentru consultanță juridică într-un caz civil. Mi-au fost explicate clar toate opțiunile și am primit sprijin pe tot parcursul. Recomand cu încredere.&rdquo;
-            </p>
-            <div><span class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- Andrei M.</span></div>
-          </div>
-          <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in
-               hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)]
-               before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
-            <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;Am fost reprezentată în instanță într-un proces de familie. Totul a fost explicat pe înțelesul meu și m-am simțit susținută în fiecare etapă.&rdquo;</p>
-            <div class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- Elena R.</div>
-          </div>
-          <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in
-               hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)]
-               before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
-            <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;Am solicitat consultanță pentru o problemă legată de afacere. Am primit răspunsuri clare și soluții eficiente.&rdquo;</p>
-            <div class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- Victor P.</div>
-          </div>
-          <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in
-               hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)]
-               before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
-            <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;Seriozitate și profesionalism. Recomand cu drag!!!&rdquo;</p>
-            <div class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- Irina D.</div>
-          </div>
+             tablet:grid tablet:grid-cols-2 tablet:gap-[1.25rem]">
+          {reviews.data.items
+            .sort((a, b) => a.order - b.order)
+            .map(review => (
+              <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)] before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
+                <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;{review.text}&rdquo;</p>
+                <div class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- {review.author}</div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -191,8 +159,8 @@ import '../styles/global.css'
               <span class="block font-dm text-[0.54rem] tracking-[0.22em] uppercase text-taupe mb-[0.5rem]">
                 Email
               </span>
-              <a href="mailto:vmutruc@gmail.com" class="no-underline font-cormorant text-[1.25rem] text-dune font-light transition-colors duration-[180ms] ease-in hover:text-taupe block">
-                vmutruc@gmail.com
+              <a href={`mailto:${contact.data.email}`} class="no-underline font-cormorant text-[1.25rem] text-dune font-light transition-colors duration-[180ms] ease-in hover:text-taupe block">
+                {contact.data.email}
               </a>
           </div>
           <div class="py-[1.5rem] px-0 border-b border-solid border-b-taupe/15
@@ -202,7 +170,7 @@ import '../styles/global.css'
               <span class=" block font-dm text-[0.54rem] tracking-[0.22em] uppercase text-taupe mb-[0.5rem]">
               Telefon
               </span>
-              <a href="tel:+373079143577" class="no-underline font-cormorant text-[1.25rem] text-dune font-light transition-colors duration-[180ms] ease-in hover:text-taupe block">079 143 577</a>
+              <a href={`tel:${contact.data.phone}`} class="no-underline font-cormorant text-[1.25rem] text-dune font-light transition-colors duration-[180ms] ease-in hover:text-taupe block">{contact.data.phone}</a>
           </div>
           <div class="py-[1.5rem] px-0 border-b border-solid border-b-taupe/15
           desktop:pl-[2rem] desktop:border-l  desktop:border-solid desktop:border-l-taupe/15
@@ -211,8 +179,7 @@ import '../styles/global.css'
                 Adresă birou
               </span>
               <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block">
-                mun. Chișinău, <br>Ion Neculce 5, birou
-              </p>
+{contact.data.address}</p>
           </div>
           <div class="py-[1.5rem] px-0 border-b border-solid border-b-taupe/15
           desktop:pl-[2rem] desktop:border-l desktop:border-solid desktop:border-l-taupe/15
@@ -221,13 +188,12 @@ import '../styles/global.css'
                 Program de lucru
               </span>
               <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block">
-                Luni – Vineri<br>9:00 – 18:00
-              </p>
+{contact.data.hours}</p>
           </div>
         </div>
         <div class="flex gap-[0.75rem] flex-wrap">
-          <a href="mailto:vmutruc@gmail.com" class="inline-flex items-center justify-center py-[0.85rem] px-[1.75rem] bg-taupe text-vanilla font-dm text-[0.6rem] font-medium tracking-[0.18em] uppercase no-underline border border-solid border-leather transition-all ease-in-out duration-[250ms] hover:border-dune hover:bg-leather hover:-translate-y-0.5">Trimite un email</a>
-          <a href="tel:+373079143577" class="inline-flex items-center justify-center py-[0.85rem] px-[1.75rem] bg-transparent text-dune font-dm text-[0.6rem] tracking-[0.18em] uppercase no-underline border border-solid border-dune/30 transition-all duration-[250ms] ease-in-out hover:border-dune hover:-translate-y-[2px] tablet:hidden">Sună acum</a>
+          <a href={`mailto:${contact.data.email}`} class="inline-flex items-center justify-center py-[0.85rem] px-[1.75rem] bg-taupe text-vanilla font-dm text-[0.6rem] font-medium tracking-[0.18em] uppercase no-underline border border-solid border-leather transition-all ease-in-out duration-[250ms] hover:border-dune hover:bg-leather hover:-translate-y-0.5">Trimite un email</a>
+          <a href={`tel:${contact.data.phone}`} class="inline-flex items-center justify-center py-[0.85rem] px-[1.75rem] bg-transparent text-dune font-dm text-[0.6rem] tracking-[0.18em] uppercase no-underline border border-solid border-dune/30 transition-all duration-[250ms] ease-in-out hover:border-dune hover:-translate-y-[2px] tablet:hidden">Sună acum</a>
         </div>
       </div>
     </footer>
@@ -235,14 +201,13 @@ import '../styles/global.css'
     <div class="mascot-outer">
       <div id="mascot-wrapper">
         <div class="mascot-glow"></div>
-        <img class="mascot-img" src="mascot.png" alt="Mascota avocatului">
+        <img class="mascot-img" src="/mascot.png" alt="Mascota avocatului">
         <div class="mascot-speech">
           <p>
-            Bună ziua!<br>Fiecare caz are o soluție.<br>Hai să o găsim împreună.
+            {mascot.data.message}
           </p>
         </div>
       </div>
     </div>
   </body>
 </html>
-

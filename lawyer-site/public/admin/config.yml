@@ -1,0 +1,62 @@
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+
+      - label: "Hero"
+        name: "hero"
+        file: "src/content/hero/hero.md"
+        fields:
+          - { label: "Nume avocat",    name: "title",         widget: "string" }
+          - { label: "Badge",          name: "badge",         widget: "string" }
+          - { label: "Descriere",      name: "description",   widget: "text"   }
+          - { label: "Buton primar",   name: "cta_primary",   widget: "string" }
+          - { label: "Buton secundar", name: "cta_secondary", widget: "string" }
+
+      - label: "Despre mine"
+        name: "about"
+        file: "src/content/about/about.md"
+        fields:
+          - { label: "Bloc 1", name: "block1", widget: "text" }
+          - { label: "Bloc 2", name: "block2", widget: "text" }
+          - { label: "Bloc 3", name: "block3", widget: "text" }
+          - { label: "Citat",  name: "quote",  widget: "string" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "src/content/contact/contact.md"
+        fields:
+          - { label: "Email",   name: "email",   widget: "string" }
+          - { label: "Telefon", name: "phone",   widget: "string" }
+          - { label: "Adresă",  name: "address", widget: "string" }
+          - { label: "Program", name: "hours",   widget: "string" }
+
+      - label: "Servicii"
+        name: "services"
+        file: "src/content/services/services.md"
+        fields:
+          - label: "Servicii"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Titlu",     name: "title",       widget: "string" }
+              - { label: "Descriere", name: "description", widget: "text"   }
+              - { label: "Ordine",    name: "order",       widget: "number" }
+
+      - label: "Recenzii"
+        name: "reviews"
+        file: "src/content/reviews/reviews.md"
+        fields:
+          - label: "Recenzii"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Autor",  name: "author", widget: "string" }
+              - { label: "Text",   name: "text",   widget: "text"   }
+              - { label: "Ordine", name: "order",  widget: "number" }
+
+      - label: "Mascotă"
+        name: "mascot"
+        file: "src/content/mascot/mascot.md"
+        fields:
+          - { label: "Mesaj", name: "message", widget: "text" }
