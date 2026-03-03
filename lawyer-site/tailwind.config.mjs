@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./*.html"],
+export default {
+  content: ['./src/**/*.{astro,html,js,ts}'],
   theme: {
     extend: {
       colors: {
@@ -20,9 +20,6 @@ module.exports = {
       screens: {
         'tablet':  '765px',
         'desktop': '1200px',
-      },
-      maxWidth: {
-        'inner': '1100px',
       }
     }
   },

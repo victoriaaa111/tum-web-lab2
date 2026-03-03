@@ -131,8 +131,8 @@ const mascot = await getEntry('mascot', 'mascot')
           {reviews.data.items
             .sort((a, b) => a.order - b.order)
             .map(review => (
-              <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)] before:content-['\201C'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
-                <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="bg-vanilla border border-solid border-taupe/15 p-[1.5rem] relative transition-all duration-[300ms] ease-in hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(38,38,38,0.08)] before:content-['“'] before:font-cormorant before:text-[5rem] before:font-light before:text-taupe before:opacity-10 before:absolute before:top-2 before:right-4 before:leading-none">
+                <div class="text-[0.6rem] text-taupe tracking-[0.1rem] mb-[0.85rem]">★★★★★</div>
                 <p class="font-cormorant text-[1.05rem] italic text-navy-black leading-[1.7] mb-[1rem]">&ldquo;{review.text}&rdquo;</p>
                 <div class="text-[0.58rem] font-dm text-taupe uppercase tracking-[0.15em]">- {review.author}</div>
               </div>
