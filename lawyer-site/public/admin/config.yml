@@ -1,3 +1,10 @@
+backend:
+  name: git-gateway
+  branch: lab4
+
+media_folder: public/images
+public_folder: /images
+
 collections:
   - name: "site"
     label: "Site Content"
