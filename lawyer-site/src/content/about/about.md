@@ -7,5 +7,5 @@ block2: Ofer consultanță și reprezentare juridică în domeniul dreptului civ
 block3: Pun accent pe soluții clare, comunicare transparentă și protejarea
   intereselor clientului în fiecare etapă a procesului juridic.
 quote: Justiția nu este o promisiune — este un angajament.
-photo: https://www.lawyersbay.com/wp-content/uploads/2023/02/professional-lawyer.jpg
+photo: /images/vitalie-office.jpg
 ---
