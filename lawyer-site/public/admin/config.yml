@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: lab4
+  branch: master
 
 media_folder: public/images
 public_folder: /images
