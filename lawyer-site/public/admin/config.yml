@@ -28,6 +28,7 @@ collections:
           - { label: "Bloc 2", name: "block2", widget: "text" }
           - { label: "Bloc 3", name: "block3", widget: "text" }
           - { label: "Citat",  name: "quote",  widget: "string" }
+          - { label: "Fotografie", name: "photo", widget: "image" }
 
       - label: "Contact"
         name: "contact"

@@ -3,4 +3,5 @@ block1: "Absolvent al Universității de Stat din Moldova (1994–1999), jurist 
 block2: "Ofer consultanță și reprezentare juridică în domeniul dreptului civil, familiei, fiscal, vamal, afacerilor și comercial."
 block3: "Pun accent pe soluții clare, comunicare transparentă și protejarea intereselor clientului în fiecare etapă a procesului juridic."
 quote: "Justiția nu este o promisiune — este un angajament."
+photo: "/vitalie-office.jpg"
 ---
