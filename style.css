@@ -464,89 +464,6 @@ blockquote::before {
     font-weight: 300;
 }
 
-
-/* reviews section */
-#reviews-section{
-    min-height: 100vh;
-    background-color: var(--khaki);
-    padding: 4rem 1.25rem;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.reviews-inner{
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-#reviews-section h2{
-    font-size: 2.5rem;
-    color: var(--leather);
-}
-
-.reviews-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.review-card{
-    background-color: var(--vanilla);
-    border: 1px solid rgba(38, 38, 38, 0.07);
-    padding: 1.5rem;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review-card::before {
-    content: '\201C';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 5rem;
-    font-weight: 300;
-    color: var(--taupe);
-    opacity: 0.12;
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    left: auto;
-    line-height: 1;
-}
-
-.review-card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(38, 38, 38, 0.08);
-}
-
-.review-rating{
-    font-size: 0.6rem;
-    color: var(--taupe);
-    letter-spacing: 0.1rem;
-    margin-bottom: 0.85rem;
-}
-
-.review-card p{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--navy-black);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.review-author{
-    font-size: 0.58rem;
-    font-family: 'DM Mono', monospace;
-    color: var(--taupe);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-}
-
 /* mascot */
 .mascot-outer {
     position: fixed;
@@ -695,21 +612,6 @@ blockquote::before {
         font-size: 1.6rem;
     }
 
-
-    #reviews-section {
-        padding: 5rem 2.5rem;
-    }
-
-    #reviews-section h2 {
-        font-size: 3rem;
-    }
-
-    .reviews-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.25rem;
-    }
-
     .mascot-outer {
         width: 95px;
         bottom: 1.25rem;
@@ -795,15 +697,6 @@ blockquote::before {
     .service-card-body p {
         font-size: 0.82rem;
     }
-
-    #reviews-section {
-        padding: 7rem 4rem;
-    }
-
-    #reviews-section h2 {
-        font-size: 3.5rem;
-    }
-
 
     .mascot-outer {
         width: 105px;
