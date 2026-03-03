@@ -201,8 +201,7 @@ const mascot = await getEntry('mascot', 'mascot')
               <span class="block font-dm text-[0.54rem] tracking-[0.22em] uppercase text-taupe mb-[0.5rem]">
                 Adresă birou
               </span>
-              <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block">
-set:html={contact.data.address}</p>
+              <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block" set:html={contact.data.address}></p>
           </div>
           <div class="py-[1.5rem] px-0 border-b border-solid border-b-taupe/15
           desktop:pl-[2rem] desktop:border-l desktop:border-solid desktop:border-l-taupe/15
@@ -210,8 +209,7 @@ set:html={contact.data.address}</p>
               <span class="block font-dm text-[0.54rem] tracking-[0.22em] uppercase text-taupe mb-[0.5rem]">
                 Program de lucru
               </span>
-              <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block">
-set:html={contact.data.hours}</p>
+              <p class="font-cormorant text-[1.25rem] leading-[1.5] font-light text-dune block"  set:html={contact.data.hours}></p>
           </div>
         </div>
         <div class="flex gap-[0.75rem] flex-wrap">
@@ -226,9 +224,7 @@ set:html={contact.data.hours}</p>
         <div class="mascot-glow"></div>
         <img class="mascot-img" src="/images/mascot.png" alt="Mascota avocatului">
         <div class="mascot-speech">
-          <p>
-            set:html={mascot.data.message}
-          </p>
+          <p set:html={mascot.data.message}></p>
         </div>
       </div>
     </div>
