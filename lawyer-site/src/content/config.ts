@@ -18,6 +18,7 @@ const about = defineCollection({
         block2: z.string(),
         block3: z.string(),
         quote:  z.string(),
+        photo:  z.string(),
     })
 })
 
