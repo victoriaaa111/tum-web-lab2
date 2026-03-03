@@ -505,7 +505,7 @@ blockquote::before {
     position: absolute;
     bottom:100%;
     right:0;
-    width:150px;
+    width:180px;
     background-color: var(--vanilla);
     border:1px solid rgba(163, 150, 141, 0.3);
     padding: 0.6rem 0.75rem 0.5rem;
@@ -623,7 +623,7 @@ blockquote::before {
         height: 105px;
     }
     .mascot-speech{
-        width:180px;
+        width:200px;
         padding: 0.65rem 0.8rem 0.55rem;
     }
     .mascot-speech p{
@@ -709,11 +709,11 @@ blockquote::before {
         height: 110px;
     }
     .mascot-speech{
-        width:190px;
+        width:215px;
         padding: 0.7rem 0.85rem 0.6rem;
     }
     .mascot-speech p{
-        font-size: 0.68rem;
+        font-size: 0.66rem;
     }
 
 }
