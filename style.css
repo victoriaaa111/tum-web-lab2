@@ -223,8 +223,8 @@ html {
     padding: 0.3rem 0.85rem;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(228, 221, 204, 0.18);
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
+    font-size: 0.48rem;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
     font-family: 'DM Mono', monospace;
     border-radius: 0.2rem;
@@ -570,6 +570,7 @@ blockquote::before {
     }
     .hero-badge{
         font-size: 0.65rem;
+        letter-spacing: 0.14em;
     }
 
     #about-section {
