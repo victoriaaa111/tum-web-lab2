@@ -40,43 +40,63 @@
       </div>
     </section>
 
-    <section id = "about-section">
-      <div class="section-numeral">II</div>
-      <div class="about-inner">
-        <div class="section-label">Despre mine</div>
-        <div class="about-layout">
-          <div class="about-left">
-            <h2>Experiență<br><em>și competență</em></h2>
-            <div class="section-divider"></div>
+    <section id = "about-section" class="min-h-[100vh] bg-pearl py-[4rem] px-[1.25rem] relative
+      tablet:py-[5rem] tablet:px-[2.5rem]
+      desktop:py-[7rem] desktop:px-[4rem]">
+      <div class="font-cormorant text-[7rem] font-light italic text-taupe/10 absolute right-[1rem] top-[1rem] leading-none pointer-events-none tracking-[-0.04em]">II</div>
+      <div class="max-w-[1100px] my-0 mx-auto w-full
+      tablet:w-[680px] desktop:w-[1100px]">
+        <div class="font-dm text-[0.58rem] tracking-[0.22em] uppercase text-taupe mb-[1.25rem] block max-w-[300px] mt-[1rem]">Despre mine</div>
+        <div class="flex flex-col gap-[2rem] mb-[2.5rem]
+             desktop:grid desktop:grid-cols-2 desktop:gap-[5rem] desktop:items-start desktop:mb-[4rem]">
+          <div >
+            <h2 class="text-[2.5rem] text-leather
+                tablet:text-[3rem]
+                desktop:text-[3.5rem]">
+              Experiență<br><em>și competență
+            </em></h2>
+            <div class="w-[2.5rem] h-[1px] bg-taupe opacity-50 mt-[1.5rem] mx-0 mb-[0.8rem]"></div>
           </div>
-          <div class="about-right">
-              <div class="about-block">
-                <div class="about-block-marker">01</div>
-                <p>
+          <div>
+              <div class="flex py-[1.25rem] px-0 gap-[1.25rem] border-y border-solid border-leather/10 items-start
+                   transition-all duration-[300ms] ease-in
+                   hover:translate-y-[-4px]">
+                <div class="font-dm text-[0.58rem] tracking-[0.1em] text-taupe flex-shrink-0 pt-[0.15rem] min-w-[1.75rem]">01</div>
+                <p class="text-[0.8rem] text-navy-black leading-[1.85] font-light">
                   Absolvent al Universității de Stat din Moldova (1994–1999), jurist licențiat în drept, activez în baza Licenței nr. 3164 din 12.06.2017, eliberată de Ministerul Justiției a Republicii Moldova.
                 </p>
               </div>
-              <div class="about-block">
-                <div class="about-block-marker">02</div>
-                <p>
+              <div class="flex py-[1.25rem] px-0 gap-[1.25rem] border-b border-solid border-leather/10 items-start
+                   transition-all duration-[300ms] ease-in
+                   hover:translate-y-[-4px]">
+                <div class="font-dm text-[0.58rem] tracking-[0.1em] text-taupe flex-shrink-0 pt-[0.15rem] min-w-[1.75rem]">02</div>
+                <p class="text-[0.8rem] text-navy-black leading-[1.85] font-light">
                   Ofer consultanță și reprezentare juridică în domeniul dreptului civil, familiei, fiscal, vamal, afacerilor și comercial.
                 </p>
               </div>
-              <div class="about-block">
-                <div class="about-block-marker">03</div>
-                <p>
+              <div class="flex py-[1.25rem] px-0 gap-[1.25rem] border-b border-solid border-leather/10 items-start
+                   transition-all duration-[300ms] ease-in
+                   hover:translate-y-[-4px]">
+                <div class="font-dm text-[0.58rem] tracking-[0.1em] text-taupe flex-shrink-0 pt-[0.15rem] min-w-[1.75rem]">03</div>
+                <p class="text-[0.8rem] text-navy-black leading-[1.85] font-light">
                   Pun accent pe soluții clare, comunicare transparentă și protejarea intereselor clientului în fiecare etapă a procesului juridic.
                 </p>
             </div>
           </div>
         </div>
-            <div class="about-photo-row">
-              <div class="about-photo">
-                <img src="vitalie-office.jpg" alt="Avocat Vitalie Mutruc" />
-                <div class="photo-caption">Vitalie Mutruc - Avocat, Chișinău</div>
+            <div class="flex flex-col gap-[2rem]
+tablet:flex-row tablet:gap-[3rem] tablet:items-center">
+              <div class="relative tablet:flex-1">
+                <img class="w-full max-w-[550px] h-auto block grayscale-15 contrast-[1.04] border border-solid border-leather/10
+                transition-all ease-in-out duration-300
+                hover:shadow-sm hover:translate-y-[-4px]" src="vitalie-office.jpg" alt="Avocat Vitalie Mutruc" />
+                <div class="text-[0.56rem] tracking-[0.15em] uppercase text-taupe/70 mt-[0.6rem] ">Vitalie Mutruc - Avocat, Chișinău</div>
               </div>
-              <div class="about-quote">
-                <blockquote>
+              <div class="py-[1rem] px-0 tablet:flex-1">
+                <blockquote class="text-[1.7rem] font-light italic text-leather leading-[1.35] relative pl-[1.5rem] font-cormorant tracking-[-0.01em]
+                before:content-[''] before:absolute before:left-0 before:top-[0.3em] before:bottom-[0.3em] before:w-[2px] before:bg-taupe/50
+                tablet:text-[2rem]
+                desktop:text-[2.2rem]">
                   &ldquo;Justiția nu este o promisiune — este un angajament.&rdquo;
                 </blockquote>
               </div>
@@ -96,7 +116,7 @@
           Ce<br><em>oferim</em>
         </h2>
         <div class="flex flex-col">
-          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-y border-solid border-dune/10 transition-colors duration-[300ms]
+          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-y border-solid border-dune/10 transition-colors ease-in duration-[300ms]
                hover:bg-dune/10
                tablet:grid-cols-[3rem_1fr_2rem] tablet:gap-[1.75rem] tablet:py-[2rem]">
             <div class="font-dm text-[0.58rem] tracking-[0.1em] text-taupe pt-[0.3rem]">01</div>
@@ -112,7 +132,7 @@
               </p>
             </div>
           </div>
-          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-b border-solid border-dune/10 transition-colors duration-[300ms]
+          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-b border-solid border-dune/10 transition-colors ease-in duration-[300ms]
                hover:bg-dune/10
                tablet:grid-cols-[3rem_1fr_2rem] tablet:gap-[1.75rem] tablet:py-[2rem]">
             <div class="font-dm text-[0.58rem] la-[0.1em] text-taupe pt-[0.3rem]">02</div>
@@ -128,7 +148,7 @@
               </p>
             </div>
           </div>
-          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-b border-solid border-dune/10 transition-colors duration-[300ms]
+          <div class="grid grid-cols-[2.5rem_1fr_1.5rem] gap-[1.25rem] items-start py-[1.75rem] px-0 border-b border-solid border-dune/10 transition-colors ease-in duration-[300ms]
                hover:bg-dune/10
                tablet:grid-cols-[3rem_1fr_2rem] tablet:gap-[1.75rem] tablet:py-[2rem]">
             <div class="font-dm text-[0.58rem] tracking-[0.1em] text-taupe pt-[0.3rem]">03</div>
