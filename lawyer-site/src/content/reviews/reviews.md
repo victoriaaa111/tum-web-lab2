@@ -5,7 +5,7 @@ items:
     text: Am apelat pentru consultanță juridică într-un caz civil. Mi-au fost
       explicate clar toate opțiunile și am primit sprijin pe tot parcursul.
       Recomand cu încredere.
-  - author: Elvira R.
+  - author: Elena R.
     order: 2
     text: Am fost reprezentată în instanță într-un proces de familie. Totul a fost
       explicat pe înțelesul meu și m-am simțit susținută în fiecare etapă.
