@@ -9,7 +9,7 @@ items:
     order: 2
     text: Am fost reprezentată în instanță într-un proces de familie. Totul a fost
       explicat pe înțelesul meu și m-am simțit susținută în fiecare etapă.
-  - author: Victor P.
+  - author: Victoria P.
     order: 3
     text: Am solicitat consultanță pentru o problemă legată de afacere. Am primit
       răspunsuri clare și soluții eficiente.
