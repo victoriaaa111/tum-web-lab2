@@ -274,9 +274,6 @@ html {
     user-select: none;
 }
 
-/*about section */
-
-
 /* mascot */
 .mascot-outer {
     position: fixed;
@@ -355,6 +352,10 @@ html {
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: auto;
+}
+
+#mascot-wrapper:hover .mascot-img {
+    animation: mascot-bounce 0.4s ease;
 }
 
 /* tablet */
@@ -484,4 +485,11 @@ html {
 @keyframes mascot-glow-pulse {
     0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
     50%       { opacity: 1;   transform: translateX(-50%) scale(1.2); }
+}
+
+@keyframes mascot-bounce {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.12); }
+    70%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
 }
