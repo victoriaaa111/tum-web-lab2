@@ -34,13 +34,17 @@ const mascot = await getEntry('mascot', 'mascot')
       }
 
       if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", (user) => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
+        window.netlifyIdentity.on("init", (user) => {
+          if (user) {
+            // Already logged in → go straight to admin
+            window.location.href = "/admin/";
+          } else {
+            // Not logged in → wait for login event, then redirect
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
       }
     </script>
   </head>
