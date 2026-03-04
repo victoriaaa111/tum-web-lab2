@@ -16,4 +16,7 @@ items:
   - author: Irina D.
     order: 4
     text: Seriozitate și profesionalism. Recomand cu drag!!!
+  - author: Victoria M.
+    text: Abordare serioasa si rezultate frumoase!
+    order: 5
 ---
